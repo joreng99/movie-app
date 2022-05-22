@@ -1,6 +1,22 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
 
 function App() {
-  return null;
+  return <Router> {/*url에 따라 render*/}
+    <Switch>
+      <Route path = "/movie"> {/*주소가 /movie 일 때*/}
+        <Detail />
+      </Route>
+      <Route path = "/"> {/*주소가 home 일때*/} 
+        <Home />
+      </Route>
+    </Switch>
+  </Router>;
 }
 
 export default App;
