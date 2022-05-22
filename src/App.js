@@ -9,7 +9,7 @@ import Detail from "./routes/Detail";
 function App() {
   return <Router> {/*url에 따라 render*/}
     <Switch>
-      <Route path = "/movie"> {/*주소가 /movie 일 때*/}
+      <Route path = "/movie/:id"> {/*주소가 /movie/id(parameter) 일 때*/}
         <Detail />
       </Route>
       <Route path = "/"> {/*주소가 home 일때*/} 
