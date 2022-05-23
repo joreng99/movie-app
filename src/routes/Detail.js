@@ -11,9 +11,9 @@ function Detail() {
       console.log(json);
   };
 
-  useEffect(()=> {
+  useEffect (()=> {
     getMovie();
-  }, [])
+  }, []);
   return <h1>Detail</h1>
 }
 
