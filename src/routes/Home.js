@@ -15,10 +15,9 @@ function Home() {
   useEffect(()=>{
     getMovies()
   },[]);
-  console.log(movies);
-  return <div>
-    {loading ? <h1>Loading...</h1> : 
-    <div>
+  return <div class={styles.container}>
+    {loading ? <div class={styles.loader}><h1>Loading...</h1></div> : 
+    <div class={styles.movies}>
       {movies.map((movie) => (
       <Movie 
         key = {movie.id}
