@@ -5,11 +5,11 @@ import styles from "./Movie.module.css";
 
 function Movie({id,coverImg,title, year,summary,genres}) {
   return (      
-    <div>
-      <img src={coverImg} alt={title}/>
-      <h2><Link to={`/movie/${id}`}>{title}</Link> ({year})</h2>
+    <div class={styles.movie}>
+      <img class={styles.movie__img} src={coverImg} alt={title}/>
+      <div><span class={styles.movie__title}><Link to={`/movie/${id}`}>{title}</Link></span><span class={styles.movie__title}> ({year})</span></div>
       <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
-      <ul>
+      <ul class={styles.movie__genres}>
         {genres.map( (genre) => <li key={genre}>{genre}</li> )}
       </ul>
     </div>
