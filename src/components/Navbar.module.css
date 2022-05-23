@@ -1,0 +1,23 @@
+.navbar {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.655);
+  position: fixed;
+  z-index: 1;
+}
+
+.logo,
+.title {
+  display: inline;
+  margin: 5px;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.logo {
+  color: lightcoral;
+  font-weight: 700;
+  border: 1px solid;
+  padding: 0 4px;
+}
