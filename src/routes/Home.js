@@ -22,6 +22,7 @@ function Home() {
       {/*Navbar*/}
       <Navbar />
       {/*Movie description*/}
+      <span class={styles.guide}>Click the title to see more details</span>
       <div class={styles.movies}>
         {movies.map((movie) => (
         <Movie 
