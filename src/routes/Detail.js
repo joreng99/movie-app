@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"; //앞에서 넘겨준 url id받아오기
-import styles from "./Home.module.css";
+import styles from "./Detail.module.css";
 
 
 function Detail() {
   const [loading, setLoading] = useState(true);
   const {id} = useParams();
-  console.log(id);
   const [details, setDetails] = useState([]);
 
   const getDetails = async() => {
@@ -14,8 +13,8 @@ function Detail() {
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
       ).json();
       setDetails(json.data.movie);
-      console.log(json);
       setLoading(false);
+      console.log(json)
   };
 
   useEffect (()=> {
@@ -26,16 +25,18 @@ function Detail() {
     {loading ? <div class={styles.loader}><h1>Loading to detail page...</h1></div> :     
     <div class={styles.container}>
       {/*Movie details*/}
-      <img class={'styles.detial__img'} src={details.large_cover_image} alt={details.title}/>
-      <div><h2>{details.title} ({details.year})</h2></div>
-      <span>language: {details.language} </span>
-      <span>rate: {details.rating} </span>
-      <span>runtime: {details.runtime}</span>
-      <p>{details.description_full}</p>
-      <ul><span>genre</span>
+      <img class={styles.detail__img} src={details.medium_cover_image} alt={details.title}/>
+      <h2>{details.title} ({details.year})</h2>
+      <div class={styles.detail__info}>
+        <span>language: {details.language} </span>
+        <span>rate: {details.rating} / 10</span>
+        <span>runtime: {details.runtime} min</span>
+      </div>
+      <ul  class={styles.detail__genres}>
         {details.genres.map((genre) => <li key={genre}>{genre}</li>)}
       </ul>
-      <button>Download</button>
+      <div class={styles.detail__summary}><p>{details.description_full}</p></div>
+      <a href = "https://yts.mx/torrent/download/2AEDED408119B4882E8D9AC0C5811B2731585CB1"><button  class={styles.detail__download}>Download</button></a>
     </div>}
   </div>);
 }
