@@ -2,7 +2,7 @@
   padding: 10px;
   display: flex;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.655);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 1;
 }
@@ -12,11 +12,11 @@
   display: inline;
   margin: 5px;
   font-size: 18px;
-  color: aliceblue;
+  color: white;
 }
 
 .logo {
-  color: lightcoral;
+  color: white;
   font-weight: 700;
   border: 1px solid;
   padding: 0 4px;

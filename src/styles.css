@@ -8,6 +8,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, lightcoral, rgba(252, 164, 63, 0.808)) fixed;
+  background: linear-gradient(to bottom, lightcoral, rgb(107, 51, 150)) fixed;
   height: 100%;
 }
