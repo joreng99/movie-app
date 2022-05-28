@@ -10,7 +10,6 @@ import Detail from "./routes/Detail";
 
 function App() {
   return <Router> {/*url에 따라 render*/}
-    <div>
     <Switch>
       <Route path = "/movie/:id"> {/*주소가 /movie/id(parameter) 일 때*/}
         <Detail />
@@ -19,15 +18,6 @@ function App() {
         <Home />
       </Route>
     </Switch>
-      <Switch>
-        <Route path = "/movie/:id"> {/*주소가 /movie/id(parameter) 일 때*/}
-          <Detail />
-        </Route>
-        <Route path = "/"> {/*주소가 home 일때*/} 
-          <Home />
-        </Route>
-      </Switch>
-    </div>
   </Router>;
 }
 
