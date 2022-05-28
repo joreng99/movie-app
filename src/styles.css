@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, lightcoral, rgb(107, 51, 150)) fixed;
+  background: url('../img/space.jpg') fixed;
   height: 100%;
 }
+
+
+/*linear-gradient(to bottom, lightcoral, rgb(107, 51, 150))*/

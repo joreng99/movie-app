@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"; //앞에서 넘겨준 url id받아오기
 import styles from "./Detail.module.css";
-
+import Navbar from "../components/Navbar";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +24,8 @@ function Detail() {
     
     {loading ? <div class={styles.loader}><h1>Loading to detail page...</h1></div> :     
     <div class={styles.container}>
+      {/*Navbar*/}
+      <Navbar />
       {/*Movie details*/}
       <img class={styles.detail__img} src={details.medium_cover_image} alt={details.title}/>
       <h2>{details.title} ({details.year})</h2>

@@ -1,3 +1,12 @@
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: rgba(250, 250, 250, 0.804);
+}
 
 .container {
   padding: 30px;
@@ -9,16 +18,6 @@
   max-width: 1060px;
   color: rgba(250, 250, 250, 0.804);
   margin:auto;
-}
-
-.loader {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  color: rgba(250, 250, 250, 0.804);
 }
 
 .detail__img {
@@ -84,7 +83,6 @@
   
   .detail__info span {
     display: block;
-
   }
 
 }
